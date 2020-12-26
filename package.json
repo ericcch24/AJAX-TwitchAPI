@@ -1,0 +1,22 @@
+{
+  "name": "twitchapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "week8hw2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericcch24/w8-AJAX-TwitchAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericcch24/w8-AJAX-TwitchAPI/issues"
+  },
+  "homepage": "https://github.com/ericcch24/w8-AJAX-TwitchAPI#readme",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}

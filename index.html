@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>twitch API</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="week8hw2.css" />
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>twitch API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="twitchAPI.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+  </head>
 
-<body>
-  <nav class="navbar">
-    <div class="wrapper">
-      <div class="navbar__topic">
-        Twitch Top Games
+  <body>
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="navbar__topic">Twitch Top Games</div>
+        <ul class="navbar__list"></ul>
       </div>
-      <ul class="navbar__list">
-      </ul>
-    </div>
-  </nav>
-  <div class="game-page">
-    <div class="wrapper">
-      <div class="game-page__topic">
-        Click Top Game
-      </div>
-      <div class="game-page__desc">
-        Top 20 popular live streams sorted by current viewers
-      </div>
-      <div class='stream'>
+    </nav>
+    <div class="game-page">
+      <div class="wrapper">
+        <div class="game-page__topic">Click Top Game</div>
+        <div class="game-page__desc">
+          Top 20 popular live streams sorted by current viewers
+        </div>
+        <div class="stream"></div>
       </div>
     </div>
-  </div>
-  <script src="week8hw2.js"></script>
-</body>
+    <script src="twitchAPI.js"></script>
+  </body>
 </html>

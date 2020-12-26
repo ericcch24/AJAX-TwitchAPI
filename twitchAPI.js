@@ -5,7 +5,13 @@ function getGames(cb) {
   request.setRequestHeader('Accept', 'application/vnd.twitchtv.v5+json');
   request.onload = () => {
     if (request.status >= 200 && request.status < 400) {
-      cb(JSON.parse(request.response));
+      let res;
+      try {
+        res = JSON.parse(request.response);
+        cb(res);
+      } catch (error) {
+        console.error('抓取失敗', error);
+      }
     }
   };
   request.send();
@@ -13,12 +19,22 @@ function getGames(cb) {
 
 function getStreams(name, cb) {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', `https://api.twitch.tv/kraken/streams/?game=${encodeURIComponent(name)}`, true);
+  xhr.open(
+    'GET',
+    `https://api.twitch.tv/kraken/streams/?game=${encodeURIComponent(name)}`,
+    true
+  );
   xhr.setRequestHeader('Client-ID', '1oymoviz1aa1vi91cj12n1nisqs5ay');
   xhr.setRequestHeader('Accept', 'application/vnd.twitchtv.v5+json');
   xhr.onload = () => {
     if (xhr.status >= 200 && xhr.status < 400) {
-      cb(JSON.parse(xhr.response));
+      let res;
+      try {
+        res = JSON.parse(xhr.response);
+        cb(res);
+      } catch (error) {
+        console.error('抓取失敗', error);
+      }
     }
   };
   xhr.send();
@@ -50,7 +66,7 @@ function addEmptyBox() {
 }
 
 getGames((games) => {
-  const topGames = games.top.map(game => game.game.name);
+  const topGames = games.top.map((game) => game.game.name);
   for (let i = 0; i < topGames.length; i += 1) {
     const list = document.createElement('li');
     list.innerHTML = topGames[i];
@@ -58,17 +74,15 @@ getGames((games) => {
   }
 });
 
-document
-  .querySelector('.navbar__list')
-  .addEventListener('click', (e) => {
-    if (e.target.tagName.toLowerCase() === 'li') {
-      const text = e.target.innerText;
-      document.querySelector('.game-page__topic').innerText = text;
-      document.querySelector('.stream').innerHTML = '';
-      getStreams(text, (data) => {
-        appendStreams(data);
-        addEmptyBox();
-        addEmptyBox();
-      });
-    }
-  });
+document.querySelector('.navbar__list').addEventListener('click', (e) => {
+  if (e.target.tagName.toLowerCase() === 'li') {
+    const text = e.target.innerText;
+    document.querySelector('.game-page__topic').innerText = text;
+    document.querySelector('.stream').innerHTML = '';
+    getStreams(text, (data) => {
+      appendStreams(data);
+      addEmptyBox();
+      addEmptyBox();
+    });
+  }
+});
