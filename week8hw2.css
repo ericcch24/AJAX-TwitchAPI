@@ -1,0 +1,184 @@
+.navbar .wrapper {
+  height: 84px;
+  background: white;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0px 45px;
+}
+
+.navbar {
+  border-bottom: 3px solid black;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.wrapper {
+  max-width: 1920px; 
+  margin: 0 auto; 
+} 
+
+.navbar__topic {
+  color: black;
+  font-family: Questrial;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.navbar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 17px;
+}
+
+.navbar__list li {
+  border-radius: 8px;
+  border: 2px solid gray;
+  transition: background 0.3s;
+  margin-left: 5px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;  
+  color: black;
+  padding: 10px 10px;
+}
+
+.navbar__list li.active, .navbar__list li:hover { 
+  background: gray; 
+  color: white;
+}
+
+
+
+body {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.game-page {
+  margin: 0px 40px;
+  max-width: 1920px;
+}
+
+.game-page__topic {
+  font-size: 40px;
+  text-align: center;
+  margin: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.game-page__desc {
+  font-size: 26px;
+  text-align: center;
+  margin: 10px;
+  color: white;
+}
+
+.stream {
+  margin-top: 30px;
+  text-align: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stream__box {
+  border: 1px solid black;
+  margin: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.stream__box__empty {
+  width: 320px;
+  margin: 20px;
+}
+
+.stream__box:hover {
+  transform: scale(1.2);
+  filter: brightness(1.1);
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  background: rgba(0, 0, 0, 0.7);;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.word {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.content {
+  color: white;
+  font-size: 20px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.name {
+  color: white;
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+
+
+
+.hide {
+  display: none;
+}
+
+
+
+
+
+@media (max-width: 768px) { /* 手機平板寬度下的顯示方式 */
+  .navbar .wrapper {
+    height: 165px;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: space-between;
+  }
+
+  .navbar__topic {
+   margin-top: 10px;
+   white-space: nowrap;
+  }
+
+  .navbar__list {
+    display: flex;
+    width: 100%; /* 佔滿整排元素 */
+    font-size: 13px;
+  }
+
+  .navbar__list li {
+    margin-left: 0;
+    flex: 1; /* 全部元素會均分 */
+    border-radius: 0px;
+    text-align: center;
+  }
+
+  .game-page {
+    margin: 0;
+  }
+
+  .stream__box {
+    margin: 10px 0px;
+  }
+}
