@@ -15,4 +15,4 @@
 
 - Javascript
 - HTML
-- SCSS
+- CSS

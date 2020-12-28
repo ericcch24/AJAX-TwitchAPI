@@ -1,10 +1,9 @@
-@charset "UTF-8";
 .navbar .wrapper {
   height: 84px;
   background: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; 
+  align-items: center; 
   padding: 0px 45px;
 }
 
@@ -16,9 +15,9 @@
 }
 
 .wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-}
+  max-width: 1920px; 
+  margin: 0 auto; 
+} 
 
 .navbar__topic {
   color: black;
@@ -43,15 +42,17 @@
   margin-left: 5px;
   cursor: pointer;
   display: block;
-  text-decoration: none;
+  text-decoration: none;  
   color: black;
   padding: 10px 10px;
 }
 
-.navbar__list li.active, .navbar__list li:hover {
-  background: gray;
+.navbar__list li.active, .navbar__list li:hover { 
+  background: gray; 
   color: white;
 }
+
+
 
 body {
   background: rgba(0, 0, 0, 0.6);
@@ -106,7 +107,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px 0px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);;
 }
 
 .avatar {
@@ -136,12 +137,18 @@ body {
   text-align: left;
 }
 
+
+
+
 .hide {
   display: none;
 }
 
-@media (max-width: 768px) {
-  /* 手機平板寬度下的顯示方式 */
+
+
+
+
+@media (max-width: 768px) { /* 手機平板寬度下的顯示方式 */
   .navbar .wrapper {
     height: 165px;
     flex-direction: column;
@@ -150,21 +157,19 @@ body {
   }
 
   .navbar__topic {
-    margin-top: 10px;
-    white-space: nowrap;
+   margin-top: 10px;
+   white-space: nowrap;
   }
 
   .navbar__list {
     display: flex;
-    width: 100%;
-    /* 佔滿整排元素 */
+    width: 100%; /* 佔滿整排元素 */
     font-size: 13px;
   }
 
   .navbar__list li {
     margin-left: 0;
-    flex: 1;
-    /* 全部元素會均分 */
+    flex: 1; /* 全部元素會均分 */
     border-radius: 0px;
     text-align: center;
   }
@@ -177,5 +182,3 @@ body {
     margin: 10px 0px;
   }
 }
-
-/*# sourceMappingURL=twitchAPI.css.map */
