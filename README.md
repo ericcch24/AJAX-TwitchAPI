@@ -2,7 +2,7 @@
 
 使用 AJAX XMLHttpRequest 發送 API request 的練習。
 
-[Twitch 觀看人數前五名實況遊戲](https://ericcch24.github.io/w8-AJAX-TwitchAPI/)
+[Twitch 觀看人數前五名實況遊戲](https://ericcch24.github.io/AJAX-TwitchAPI/)
 
 ![](https://i.imgur.com/4jpoRTA.jpg)
 
